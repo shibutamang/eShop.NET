@@ -21,7 +21,7 @@ namespace eShop.UI.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("eShopDbContext", throwIfV1Schema: false)
         {
         }
 

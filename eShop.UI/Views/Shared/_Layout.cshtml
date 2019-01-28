@@ -4,41 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/Content/themes/styles/bootstrap4/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="~/Content/themes/plugins/OwlCarousel2-2.2.1/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/themes/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" rel="stylesheet" />
+    <link href="~/Content/themes/plugins/OwlCarousel2-2.2.1/animate.css" rel="stylesheet" />
+    <link href="~/Content/themes/plugins/slick-1.8.0/slick.css" rel="stylesheet" />
+    <link href="~/Content/themes/styles/main_styles.css" rel="stylesheet" />
+    <link href="~/Content/themes/styles/responsive.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+    <div class="super_container">
+        @Html.Partial("_Header")
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        @Html.Partial("_Footer")
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <script src="~/Content/themes/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/themes/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Content/themes/styles/bootstrap4/popper.js"></script>
+    <script src="~/Content/themes/plugins/greensock/TweenMax.min.js"></script>
+    <script src="~/Content/themes/plugins/greensock/TimelineMax.min.js"></script>
+    <script src="~/Content/themes/plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="~/Content/themes/plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="~/Content/themes/plugins/greensock/animation.gsap.min.js"></script>
+    <script src="~/Content/themes/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Content/themes/plugins/slick-1.8.0/slick.js"></script>
+    <script src="~/Content/themes/plugins/easing/easing.js"></script>
+    <script src="~/Content/themes/js/custom.js"></script>
 </body>
 </html>
